@@ -63,6 +63,31 @@ textarea{width:100%;min-height:145px;border:1px solid var(--line);border-radius:
 
 .roof-card .roof-photo{display:block;width:100%;height:190px;object-fit:cover;border-radius:10px;margin:0 0 10px;border:1px solid rgba(90,70,50,.16)}
 @media(max-width:600px){.roof-card .roof-photo{height:165px}}
+
+/* PERBAIKAN RESPONSIF FOTO IMAH ADAT */
+.roof-card .roof-photo{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:4 / 3;
+  object-fit:contain;
+  object-position:center;
+  background:#f8f5ef;
+  border-radius:10px;
+  margin:0 0 12px;
+}
+@media(max-width:760px){
+  .roof-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .roof-card{display:block;min-width:0;}
+  .roof-card .roof-photo{width:100%;height:auto;aspect-ratio:4 / 3;object-fit:contain;}
+}
+@media(max-width:520px){
+  .roof-grid{grid-template-columns:1fr;}
+  .roof-card{display:block;padding:12px;}
+  .roof-card .roof-photo{width:100%;height:auto;aspect-ratio:4 / 3;object-fit:contain;}
+  .roof-card h4{margin:7px 0 5px;}
+  .roof-card p{margin:5px 0;}
+}
 </style>
 </head>
 <body><div class="app">
